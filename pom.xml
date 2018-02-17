@@ -19,6 +19,10 @@
         <!-- app -->
         <servlet-api.version>4.0.0</servlet-api.version>
         <spring.version>4.3.14.RELEASE</spring.version>
+        <spring-data-jpa.version>1.11.10.RELEASE</spring-data-jpa.version>
+        <postgresql.version>42.1.4</postgresql.version>
+        <hibernate.version>5.2.13.Final</hibernate.version>
+        <jaxb-api.version>2.3.0</jaxb-api.version>
 
         <!-- tests -->
         <junit.version>4.12</junit.version>
@@ -43,9 +47,43 @@
 
         <dependency>
             <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- spring-data-jpa -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${spring-data-jpa.version}</version>
+        </dependency>
+
+        <!-- postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+
+        <!-- hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <!-- jaxb-api -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>${jaxb-api.version}</version>
         </dependency>
 
         <!-- junit -->
