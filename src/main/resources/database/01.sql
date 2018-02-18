@@ -2,18 +2,18 @@
 
 CREATE TABLE users (
   id         BIGSERIAL PRIMARY KEY,
-  username   VARCHAR(256) NOT NULL,
-  password   VARCHAR(256) NOT NULL,
-  name       VARCHAR(256),
-  surname    VARCHAR(256),
-  patronymic VARCHAR(256),
-  phone      VARCHAR(256),
+  username   VARCHAR(64) NOT NULL,
+  password   VARCHAR(64) NOT NULL,
+  name       VARCHAR(64),
+  surname    VARCHAR(64),
+  patronymic VARCHAR(64),
+  phone      VARCHAR(64),
   avatar     VARCHAR(1024)
 );
 
 CREATE TABLE roles (
   id    BIGSERIAL PRIMARY KEY,
-  title VARCHAR(256)
+  title VARCHAR(64)
 );
 
 CREATE TABLE users_roles_relations (
