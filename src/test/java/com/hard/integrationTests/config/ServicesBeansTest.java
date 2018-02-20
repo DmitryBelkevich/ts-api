@@ -1,7 +1,7 @@
 package com.hard.integrationTests.config;
 
 import com.hard.config.AppConfig;
-import com.hard.services.UserService;
+import com.hard.services.*;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,6 +22,94 @@ import org.springframework.web.context.WebApplicationContext;
 public class ServicesBeansTest {
     @Autowired
     private WebApplicationContext webApplicationContext;
+
+    @Test
+    public void shouldReturnApartmentServiceImplBean_Test() {
+        ApartmentService apartmentService = null;
+
+        try {
+            apartmentService = (ApartmentService) webApplicationContext.getBean("apartmentServiceImpl");
+        } catch (NoSuchBeanDefinitionException e) {
+            Assert.fail(e.getLocalizedMessage());
+        }
+    }
+
+    @Test
+    public void shouldReturnIssueServiceImplBean_Test() {
+        IssueService issueService = null;
+
+        try {
+            issueService = (IssueService) webApplicationContext.getBean("issueServiceImpl");
+        } catch (NoSuchBeanDefinitionException e) {
+            Assert.fail(e.getLocalizedMessage());
+        }
+    }
+
+    @Test
+    public void shouldReturnMessageIssueServiceImplBean_Test() {
+        MessageIssueService messageIssueService = null;
+
+        try {
+            messageIssueService = (MessageIssueService) webApplicationContext.getBean("messageIssueServiceImpl");
+        } catch (NoSuchBeanDefinitionException e) {
+            Assert.fail(e.getLocalizedMessage());
+        }
+    }
+
+    @Test
+    public void shouldReturnMessageTopicServiceImplBean_Test() {
+        MessageTopicService messageTopicService = null;
+
+        try {
+            messageTopicService = (MessageTopicService) webApplicationContext.getBean("messageTopicServiceImpl");
+        } catch (NoSuchBeanDefinitionException e) {
+            Assert.fail(e.getLocalizedMessage());
+        }
+    }
+
+    @Test
+    public void shouldReturnPartnershipServiceImplBean_Test() {
+        PartnershipService partnershipService = null;
+
+        try {
+            partnershipService = (PartnershipService) webApplicationContext.getBean("partnershipServiceImpl");
+        } catch (NoSuchBeanDefinitionException e) {
+            Assert.fail(e.getLocalizedMessage());
+        }
+    }
+
+    @Test
+    public void shouldReturnPositionServiceImplBean_Test() {
+        PositionService positionService = null;
+
+        try {
+            positionService = (PositionService) webApplicationContext.getBean("positionServiceImpl");
+        } catch (NoSuchBeanDefinitionException e) {
+            Assert.fail(e.getLocalizedMessage());
+        }
+    }
+
+    @Test
+    public void shouldReturnRoleServiceImplBean_Test() {
+        RoleService roleService = null;
+
+        try {
+            roleService = (RoleService) webApplicationContext.getBean("roleServiceImpl");
+        } catch (NoSuchBeanDefinitionException e) {
+            Assert.fail(e.getLocalizedMessage());
+        }
+    }
+
+    @Test
+    public void shouldReturnTopicServiceImplBean_Test() {
+        TopicService topicService = null;
+
+        try {
+            topicService = (TopicService) webApplicationContext.getBean("topicServiceImpl");
+        } catch (NoSuchBeanDefinitionException e) {
+            Assert.fail(e.getLocalizedMessage());
+        }
+    }
 
     @Test
     public void shouldReturnUserServiceImplBean_Test() {
