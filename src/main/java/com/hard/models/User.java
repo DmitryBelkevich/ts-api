@@ -62,4 +62,7 @@ public class User extends AbstractModel {
 
     @OneToMany(mappedBy = "author")
     private Set<Topic> topics;
+
+    @OneToMany(mappedBy = "user")
+    private Set<MessageTopic> messagesTopics;
 }
