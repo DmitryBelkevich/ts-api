@@ -11,10 +11,6 @@ public abstract class AbstractModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    public AbstractModel() {
-
-    }
-
     public long getId() {
         return id;
     }

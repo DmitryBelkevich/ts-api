@@ -1,6 +1,7 @@
 package com.hard.models;
 
 import javax.persistence.*;
+import java.util.Map;
 import java.util.Set;
 
 @Entity
@@ -50,4 +51,13 @@ public class User extends AbstractModel {
             }
     )
     private Set<Partnership> partnerships;
+
+    @JoinTable(
+            name = "users_partnerships_positions_relations",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "position_id")
+    )
+    @MapKeyJoinColumn(name = "partnership_id")
+    @ElementCollection
+    private Map<Partnership, Position> partnershipsPositions;
 }

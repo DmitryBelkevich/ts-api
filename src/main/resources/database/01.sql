@@ -41,7 +41,7 @@ CREATE TABLE positions (
   title VARCHAR(256)
 );
 
-CREATE TABLE users_partnerships_relations (
+CREATE TABLE users_partnerships_positions_relations (
   user_id        BIGSERIAL NOT NULL,
   partnership_id BIGSERIAL NOT NULL,
   position_id    BIGSERIAL NOT NULL,
