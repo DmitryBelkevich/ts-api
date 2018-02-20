@@ -76,13 +76,13 @@ CREATE TABLE users_apartments_relations (
   FOREIGN KEY (apartment_id) REFERENCES apartments (id)
 );
 
--- POSTS
+-- TOPICS
 
-CREATE TABLE posts (
+CREATE TABLE topics (
   id             BIGSERIAL PRIMARY KEY,
   partnership_id INT,
   date           DATE NOT NULL,
-  author_id        INT,
+  author_id      INT,
   title          VARCHAR(256),
   description    TEXT,
   importance     INT, -- 1 - low, 2 - middle, 3 - high
@@ -90,14 +90,14 @@ CREATE TABLE posts (
   FOREIGN KEY (author_id) REFERENCES users (id)
 );
 
-CREATE TABLE messages_posts (
+CREATE TABLE messages_topics (
   id      BIGSERIAL PRIMARY KEY,
   user_id INT,
   text    TEXT,
   date    DATE NOT NULL,
-  post_id INT,
+  topic_id INT,
   FOREIGN KEY (user_id) REFERENCES users (id),
-  FOREIGN KEY (post_id) REFERENCES posts (id)
+  FOREIGN KEY (topic_id) REFERENCES topics (id)
 );
 
 -- ISSUES
@@ -106,7 +106,7 @@ CREATE TABLE issues (
   id             BIGSERIAL PRIMARY KEY,
   partnership_id INT,
   date           DATE NOT NULL,
-  author_id        INT,
+  author_id      INT,
   title          VARCHAR(256),
   description    TEXT,
   importance     INT, -- 1 - low, 2 - middle, 3 - high
