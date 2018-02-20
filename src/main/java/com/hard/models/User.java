@@ -59,4 +59,7 @@ public class User extends AbstractModel {
             inverseJoinColumns = @JoinColumn(name = "apartment_id")
     )
     private Set<Apartment> apartments;
+
+    @OneToMany(mappedBy = "author")
+    private Set<Topic> topics;
 }

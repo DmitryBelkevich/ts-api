@@ -1,9 +1,6 @@
 package com.hard.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -29,4 +26,7 @@ public class Partnership extends AbstractModel {
 
     @Column(name = "post_index")
     private String postIndex;
+
+    @OneToMany(mappedBy = "partnership")
+    private Set<Topic> topics;
 }
