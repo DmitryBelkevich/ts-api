@@ -63,4 +63,12 @@ public class User extends AbstractModel {
 
     @OneToMany(mappedBy = "owner")
     private Set<Apartment> ownApartments;
+
+    @ManyToMany
+    @JoinTable(
+            name = "users_apartments_relations",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "apartment_id")
+    )
+    private Set<Apartment> apartments;
 }
