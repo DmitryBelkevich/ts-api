@@ -29,7 +29,4 @@ public class Partnership extends AbstractModel {
 
     @Column(name = "post_index")
     private String postIndex;
-
-    @ManyToMany(mappedBy = "partnerships")
-    private Set<User> users;
 }

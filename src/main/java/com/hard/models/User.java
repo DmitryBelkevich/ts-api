@@ -40,18 +40,6 @@ public class User extends AbstractModel {
     )
     private Set<Role> roles;
 
-    @ManyToMany
-    @JoinTable(
-            name = "users_partnerships_relations",
-            joinColumns = {
-                    @JoinColumn(name = "user_id")
-            },
-            inverseJoinColumns = {
-                    @JoinColumn(name = "partnership_id")
-            }
-    )
-    private Set<Partnership> partnerships;
-
     @JoinTable(
             name = "users_partnerships_positions_relations",
             joinColumns = @JoinColumn(name = "user_id"),
