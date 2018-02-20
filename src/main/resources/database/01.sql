@@ -17,8 +17,8 @@ CREATE TABLE roles (
 );
 
 CREATE TABLE users_roles_relations (
-  user_id INT NOT NULL,
-  role_id INT NOT NULL,
+  user_id BIGSERIAL NOT NULL,
+  role_id BIGSERIAL NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users (id),
   FOREIGN KEY (role_id) REFERENCES roles (id)
 );
@@ -42,9 +42,9 @@ CREATE TABLE positions (
 );
 
 CREATE TABLE users_partnerships_relations (
-  user_id        INT NOT NULL,
-  partnership_id INT NOT NULL,
-  position_id    INT NOT NULL,
+  user_id        BIGSERIAL NOT NULL,
+  partnership_id BIGSERIAL NOT NULL,
+  position_id    BIGSERIAL NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users (id),
   FOREIGN KEY (partnership_id) REFERENCES partnerships (id),
   FOREIGN KEY (position_id) REFERENCES positions (id)
@@ -70,8 +70,8 @@ CREATE TABLE apartments (
 );
 
 CREATE TABLE users_apartments_relations (
-  user_id      INT,
-  apartment_id INT,
+  user_id      BIGSERIAL,
+  apartment_id BIGSERIAL,
   FOREIGN KEY (user_id) REFERENCES users (id),
   FOREIGN KEY (apartment_id) REFERENCES apartments (id)
 );
@@ -82,12 +82,12 @@ CREATE TABLE posts (
   id             BIGSERIAL PRIMARY KEY,
   partnership_id INT,
   date           DATE NOT NULL,
-  user_id        INT,
+  author_id        INT,
   title          VARCHAR(256),
   description    TEXT,
   importance     INT, -- 1 - low, 2 - middle, 3 - high
   FOREIGN KEY (partnership_id) REFERENCES partnerships (id),
-  FOREIGN KEY (user_id) REFERENCES users (id)
+  FOREIGN KEY (author_id) REFERENCES users (id)
 );
 
 CREATE TABLE messages_posts (
@@ -106,13 +106,13 @@ CREATE TABLE issues (
   id             BIGSERIAL PRIMARY KEY,
   partnership_id INT,
   date           DATE NOT NULL,
-  user_id        INT,
+  author_id        INT,
   title          VARCHAR(256),
   description    TEXT,
   importance     INT, -- 1 - low, 2 - middle, 3 - high
   process_status INT  NOT NULL, -- 0 - pending, 1 - in process, 2 - done, -1 - abort
   FOREIGN KEY (partnership_id) REFERENCES partnerships (id),
-  FOREIGN KEY (user_id) REFERENCES users (id)
+  FOREIGN KEY (author_id) REFERENCES users (id)
 );
 
 CREATE TABLE messages_issues (

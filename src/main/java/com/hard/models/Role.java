@@ -8,7 +8,7 @@ import java.util.Set;
 public class Role extends AbstractModel {
     @Column(name = "title")
     @Enumerated(EnumType.STRING)
-    private RoleList title;
+    private RolesList title;
 
     @ManyToMany(mappedBy = "roles")
     private Set<User> users;
@@ -17,11 +17,11 @@ public class Role extends AbstractModel {
 
     }
 
-    public RoleList getTitle() {
+    public RolesList getTitle() {
         return title;
     }
 
-    public void setTitle(RoleList title) {
+    public void setTitle(RolesList title) {
         this.title = title;
     }
 

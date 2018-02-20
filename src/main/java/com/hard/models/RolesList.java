@@ -1,6 +1,6 @@
 package com.hard.models;
 
-public enum RoleList {
+public enum RolesList {
     ROLE_USER,
     ROLE_ADMIN,
 }

@@ -1,7 +1,8 @@
 -- PARTNERSHIPS, APARTMENTS
 
 INSERT INTO partnerships (title, country, city, street, apartment, building, post_index) VALUES
-  ('ТС "Маяк 31" Dana Towers 3.1', 'Беларусь', 'Минск', 'Петра Мстиславца', '15', NULL, 220114);
+  ('ТС "Маяк 31" Dana Towers 3.1', 'Беларусь', 'Минск', 'Петра Мстиславца', '15', NULL, 220114),
+  ('ТС "Маяк 32" Dana Towers 3.2', 'Беларусь', 'Минск', 'Петра Мстиславца', '17', NULL, 220114);
 
 INSERT INTO directions (title) VALUES
   ('Туровского'),
