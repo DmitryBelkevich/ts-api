@@ -60,4 +60,7 @@ public class User extends AbstractModel {
     @MapKeyJoinColumn(name = "partnership_id")
     @ElementCollection
     private Map<Partnership, Position> partnershipsPositions;
+
+    @OneToMany(mappedBy = "owner")
+    private Set<Apartment> ownApartments;
 }
