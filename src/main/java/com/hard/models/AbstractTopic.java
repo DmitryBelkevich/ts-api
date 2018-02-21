@@ -11,14 +11,14 @@ import java.sql.Timestamp;
 @MappedSuperclass
 public abstract class AbstractTopic extends AbstractModel {
     @ManyToOne
-    @JoinColumn(name = "partnership_id")
+    @JoinColumn(name = "partnership_id", nullable = false)
     private Partnership partnership;
 
-    @Column(name = "date")
+    @Column(name = "date", nullable = false)
     private Timestamp date;
 
     @ManyToOne
-    @JoinColumn(name = "author_id")
+    @JoinColumn(name = "author_id", nullable = false)
     private User author;
 
     @Column(name = "title", length = 256)

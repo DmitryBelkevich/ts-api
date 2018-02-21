@@ -11,13 +11,13 @@ import java.sql.Timestamp;
 @MappedSuperclass
 public abstract class AbstractMessage extends AbstractModel {
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "text")
     @Type(type = "text")
     private String text;
 
-    @Column(name = "date")
+    @Column(name = "date", nullable = false)
     private Timestamp date;
 }

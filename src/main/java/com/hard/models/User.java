@@ -7,13 +7,13 @@ import java.util.Set;
 @Entity
 @Table(name = "users")
 public class User extends AbstractModel {
-    @Column(name = "username", length = 64)
+    @Column(name = "username", length = 64, nullable = false)
     private String username;
 
-    @Column(name = "password", length = 64)
+    @Column(name = "password", length = 64, nullable = false)
     private String password;
 
-    @Column(name = "name", length = 64)
+    @Column(name = "name", length = 64, nullable = false)
     private String name;
 
     @Column(name = "surname", length = 64)

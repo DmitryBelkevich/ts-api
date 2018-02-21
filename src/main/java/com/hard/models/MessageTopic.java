@@ -9,6 +9,6 @@ import javax.persistence.Table;
 @Table(name = "messages_topic")
 public class MessageTopic extends AbstractMessage {
     @ManyToOne
-    @JoinColumn(name = "topic_id")
+    @JoinColumn(name = "topic_id", nullable = false)
     private Topic topic;
 }
