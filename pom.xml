@@ -24,6 +24,7 @@
         <spring-security.version>4.2.4.RELEASE</spring-security.version>
         <postgresql.version>42.1.4</postgresql.version>
         <hibernate.version>5.2.13.Final</hibernate.version>
+        <jackson.version>2.9.4</jackson.version>
         <jaxb-api.version>2.3.0</jaxb-api.version>
 
         <!-- tests -->
@@ -102,6 +103,13 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.version}</version>
+        </dependency>
+
+        <!-- jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
 
         <!-- jaxb-api -->

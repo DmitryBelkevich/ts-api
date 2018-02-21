@@ -27,18 +27,19 @@ CREATE TABLE users_roles_relations (
 
 CREATE TABLE partnerships (
   id         BIGSERIAL PRIMARY KEY,
-  title      VARCHAR(256) NOT NULL,
-  country    VARCHAR(256) NOT NULL,
-  city       VARCHAR(256) NOT NULL,
-  street     VARCHAR(256) NOT NULL,
-  apartment  VARCHAR(256) NOT NULL,
-  building   VARCHAR(256),
-  post_index VARCHAR(256)
+  title      VARCHAR(64) NOT NULL,
+  country    VARCHAR(64) NOT NULL,
+  city       VARCHAR(64) NOT NULL,
+  street     VARCHAR(64) NOT NULL,
+  apartment  VARCHAR(64) NOT NULL,
+  building   VARCHAR(64),
+  post_index INT
 );
 
 CREATE TABLE positions (
   id    BIGSERIAL PRIMARY KEY,
-  title VARCHAR(256)
+  title_ru VARCHAR(64),
+  title_en VARCHAR(64)
 );
 
 CREATE TABLE users_partnerships_positions_relations (
@@ -52,10 +53,10 @@ CREATE TABLE users_partnerships_positions_relations (
 
 -- APARTMENTS
 
-CREATE TABLE directions (
-  id    BIGSERIAL PRIMARY KEY,
-  title VARCHAR(256)
-);
+-- CREATE TABLE directions (
+--   id    BIGSERIAL PRIMARY KEY,
+--   title VARCHAR(64)
+-- );
 
 CREATE TABLE apartments (
   id           BIGSERIAL PRIMARY KEY,

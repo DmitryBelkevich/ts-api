@@ -7,25 +7,25 @@ import java.util.Set;
 @Entity
 @Table(name = "users")
 public class User extends AbstractModel {
-    @Column(name = "username")
+    @Column(name = "username", length = 64)
     private String username;
 
-    @Column(name = "password")
+    @Column(name = "password", length = 64)
     private String password;
 
-    @Column(name = "name")
+    @Column(name = "name", length = 64)
     private String name;
 
-    @Column(name = "surname")
+    @Column(name = "surname", length = 64)
     private String surname;
 
-    @Column(name = "patronymic")
+    @Column(name = "patronymic", length = 64)
     private String patronymic;
 
-    @Column(name = "phone")
+    @Column(name = "phone", length = 64)
     private String phone;
 
-    @Column(name = "avatar")
+    @Column(name = "avatar", length = 1024)
     private String avatar;
 
     @ManyToMany

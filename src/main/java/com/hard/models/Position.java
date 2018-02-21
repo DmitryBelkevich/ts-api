@@ -7,9 +7,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "positions")
 public class Position extends AbstractModel {
-    @Column(name = "title_ru")
+    @Column(name = "title_ru", length = 64)
     private String titleRu;
 
-    @Column(name = "title_en")
+    @Column(name = "title_en", length = 64)
     private String titleEn;
 }
