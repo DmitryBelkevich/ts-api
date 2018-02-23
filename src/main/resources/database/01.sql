@@ -53,20 +53,14 @@ CREATE TABLE users_partnerships_positions_relations (
 
 -- APARTMENTS
 
--- CREATE TABLE directions (
---   id    INT PRIMARY KEY,
---   title VARCHAR(64)
--- );
-
 CREATE TABLE apartments (
   id           BIGSERIAL PRIMARY KEY,
   number       INT NOT NULL,
   rooms        INT,
   floor        INT,
-  direction_id INT,
+  direction INT,
   owner_id     BIGSERIAL,
-  FOREIGN KEY (direction_id) REFERENCES directions (id),
-  FOREIGN KEY (owner_id) REFERENCES users (id) ON DELETE SET NULL
+  FOREIGN KEY (owner_id) REFERENCES users (id)
 );
 
 CREATE TABLE users_apartments_relations (
