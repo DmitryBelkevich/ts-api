@@ -25,7 +25,7 @@ INSERT INTO users_apartments_relations (user_id, apartment_id) VALUES
   (2, 5),
   (3, 5);
 
-INSERT INTO users_partnerships_relations (user_id, partnership_id, position_id) VALUES
+INSERT INTO users_partnerships_positions_relations (user_id, partnership_id, position_id) VALUES
   (1, 1, 1),
   (1, 1, 8),
   (2, 1, 1),
