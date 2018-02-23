@@ -37,7 +37,7 @@ CREATE TABLE partnerships (
 );
 
 CREATE TABLE positions (
-  id    BIGSERIAL PRIMARY KEY,
+  id       BIGSERIAL PRIMARY KEY,
   title_ru VARCHAR(64),
   title_en VARCHAR(64)
 );
@@ -54,12 +54,12 @@ CREATE TABLE users_partnerships_positions_relations (
 -- APARTMENTS
 
 CREATE TABLE apartments (
-  id           BIGSERIAL PRIMARY KEY,
-  number       INT NOT NULL,
-  rooms        INT,
-  floor        INT,
+  id        BIGSERIAL PRIMARY KEY,
+  number    INT NOT NULL,
+  rooms     INT,
+  floor     INT,
   direction INT,
-  owner_id     BIGSERIAL,
+  owner_id  BIGSERIAL,
   FOREIGN KEY (owner_id) REFERENCES users (id)
 );
 
@@ -74,9 +74,9 @@ CREATE TABLE users_apartments_relations (
 
 CREATE TABLE topics (
   id             BIGSERIAL PRIMARY KEY,
-  partnership_id INT NOT NULL,
+  partnership_id INT       NOT NULL,
   date           TIMESTAMP NOT NULL,
-  author_id      INT NOT NULL,
+  author_id      INT       NOT NULL,
   title          VARCHAR(256),
   description    TEXT,
   FOREIGN KEY (partnership_id) REFERENCES partnerships (id),
@@ -84,10 +84,10 @@ CREATE TABLE topics (
 );
 
 CREATE TABLE messages_topics (
-  id      BIGSERIAL PRIMARY KEY,
-  user_id BIGSERIAL NOT NULL,
-  text    TEXT,
-  date    TIMESTAMP NOT NULL,
+  id       BIGSERIAL PRIMARY KEY,
+  user_id  BIGSERIAL NOT NULL,
+  text     TEXT,
+  date     TIMESTAMP NOT NULL,
   topic_id BIGSERIAL NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users (id),
   FOREIGN KEY (topic_id) REFERENCES topics (id)
@@ -97,13 +97,13 @@ CREATE TABLE messages_topics (
 
 CREATE TABLE issues (
   id             BIGSERIAL PRIMARY KEY,
-  partnership_id INT NOT NULL,
+  partnership_id INT       NOT NULL,
   date           TIMESTAMP NOT NULL,
-  author_id      INT NOT NULL,
+  author_id      INT       NOT NULL,
   title          VARCHAR(256),
   description    TEXT,
   importance     INT, -- 1 - low, 2 - middle, 3 - high
-  process_status INT NOT NULL, -- 0 - pending, 1 - in process, 2 - done, -1 - abort
+  process_status INT       NOT NULL, -- 0 - pending, 1 - in process, 2 - done, -1 - abort
   FOREIGN KEY (partnership_id) REFERENCES partnerships (id),
   FOREIGN KEY (author_id) REFERENCES users (id)
 );
