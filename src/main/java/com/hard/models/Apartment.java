@@ -15,7 +15,7 @@ public class Apartment extends AbstractModel {
     @Column(name = "floor")
     private int floor;
 
-    @Column(name = "direction_")
+    @Column(name = "direction")
     private int direction;
 
     @ManyToOne
