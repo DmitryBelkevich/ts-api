@@ -9,7 +9,7 @@ INSERT INTO directions (title) VALUES
   ('Мстиславца'),
   ('Библиотека');
 
-INSERT INTO apartments (number, rooms, floor, direction_id) VALUES
+INSERT INTO apartments (number, rooms, floor, direction) VALUES
   (1, 4, 3, 1),
   (2, 4, 3, 2),
   (3, 4, 3, 2),
