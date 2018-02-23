@@ -42,8 +42,12 @@ public class User extends AbstractModel {
 
     @JoinTable(
             name = "users_partnerships_positions_relations",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "position_id")
+            joinColumns = {
+                    @JoinColumn(name = "user_id")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name = "position_id")
+            }
     )
     @MapKeyJoinColumn(name = "partnership_id")
     @ElementCollection
