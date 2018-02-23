@@ -6,7 +6,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "messages_topic")
+@Table(name = "messages_topics")
 public class MessageTopic extends AbstractMessage {
     @ManyToOne
     @JoinColumn(name = "topic_id", nullable = false)

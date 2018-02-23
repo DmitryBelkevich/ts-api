@@ -19,7 +19,7 @@ public class Apartment extends AbstractModel {
     private int direction;
 
     @ManyToOne
-    @JoinColumn(name = "owner_id", nullable = false)
+    @JoinColumn(name = "owner_id")
     private User owner;
 
     @ManyToMany(mappedBy = "apartments")

@@ -64,7 +64,7 @@ CREATE TABLE apartments (
   rooms        INT,
   floor        INT,
   direction_id INT,
-  owner_id     BIGSERIAL NOT NULL,
+  owner_id     BIGSERIAL,
   FOREIGN KEY (direction_id) REFERENCES directions (id),
   FOREIGN KEY (owner_id) REFERENCES users (id) ON DELETE SET NULL
 );
