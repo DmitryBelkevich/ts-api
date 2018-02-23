@@ -59,7 +59,7 @@ CREATE TABLE apartments (
   rooms     INT,
   floor     INT,
   direction INT,
-  owner_id  BIGSERIAL,
+  owner_id  INT,
   FOREIGN KEY (owner_id) REFERENCES users (id)
 );
 
