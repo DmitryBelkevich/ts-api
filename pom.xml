@@ -8,6 +8,8 @@
     <artifactId>ts-api</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>${artifactId}</name>
+
     <packaging>war</packaging>
 
     <properties>
