@@ -69,4 +69,108 @@ public class User extends AbstractModel {
 
     @OneToMany(mappedBy = "user")
     private Set<MessageTopic> messagesTopics;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
+    }
+
+    public void setPatronymic(String patronymic) {
+        this.patronymic = patronymic;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+    public Map<Partnership, Position> getPartnershipsPositions() {
+        return partnershipsPositions;
+    }
+
+    public void setPartnershipsPositions(Map<Partnership, Position> partnershipsPositions) {
+        this.partnershipsPositions = partnershipsPositions;
+    }
+
+    public Set<Apartment> getOwnApartments() {
+        return ownApartments;
+    }
+
+    public void setOwnApartments(Set<Apartment> ownApartments) {
+        this.ownApartments = ownApartments;
+    }
+
+    public Set<Apartment> getApartments() {
+        return apartments;
+    }
+
+    public void setApartments(Set<Apartment> apartments) {
+        this.apartments = apartments;
+    }
+
+    public Set<Topic> getTopics() {
+        return topics;
+    }
+
+    public void setTopics(Set<Topic> topics) {
+        this.topics = topics;
+    }
+
+    public Set<MessageTopic> getMessagesTopics() {
+        return messagesTopics;
+    }
+
+    public void setMessagesTopics(Set<MessageTopic> messagesTopics) {
+        this.messagesTopics = messagesTopics;
+    }
 }

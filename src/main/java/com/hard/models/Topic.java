@@ -10,4 +10,12 @@ import java.util.Set;
 public class Topic extends AbstractTopic {
     @OneToMany(mappedBy = "topic")
     private Set<MessageTopic> messagesTopics;
+
+    public Set<MessageTopic> getMessagesTopics() {
+        return messagesTopics;
+    }
+
+    public void setMessagesTopics(Set<MessageTopic> messagesTopics) {
+        this.messagesTopics = messagesTopics;
+    }
 }

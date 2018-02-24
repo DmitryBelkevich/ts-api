@@ -27,4 +27,44 @@ public abstract class AbstractTopic extends AbstractModel {
     @Column(name = "description")
     @Type(type = "text")
     private String description;
+
+    public Partnership getPartnership() {
+        return partnership;
+    }
+
+    public void setPartnership(Partnership partnership) {
+        this.partnership = partnership;
+    }
+
+    public Timestamp getDate() {
+        return date;
+    }
+
+    public void setDate(Timestamp date) {
+        this.date = date;
+    }
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

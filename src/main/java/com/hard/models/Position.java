@@ -12,4 +12,20 @@ public class Position extends AbstractModel {
 
     @Column(name = "title_en", length = 64)
     private String titleEn;
+
+    public String getTitleRu() {
+        return titleRu;
+    }
+
+    public void setTitleRu(String titleRu) {
+        this.titleRu = titleRu;
+    }
+
+    public String getTitleEn() {
+        return titleEn;
+    }
+
+    public void setTitleEn(String titleEn) {
+        this.titleEn = titleEn;
+    }
 }

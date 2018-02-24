@@ -12,4 +12,20 @@ public class Role extends AbstractModel {
 
     @ManyToMany(mappedBy = "roles")
     private Set<User> users;
+
+    public RolesList getTitle() {
+        return title;
+    }
+
+    public void setTitle(RolesList title) {
+        this.title = title;
+    }
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
 }
