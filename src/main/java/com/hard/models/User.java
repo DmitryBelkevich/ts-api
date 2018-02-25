@@ -13,11 +13,11 @@ public class User extends AbstractModel {
     @Column(name = "password", length = 64, nullable = false)
     private String password;
 
-    @Column(name = "name", length = 64, nullable = false)
-    private String name;
-
     @Column(name = "surname", length = 64)
     private String surname;
+
+    @Column(name = "name", length = 64, nullable = false)
+    private String name;
 
     @Column(name = "patronymic", length = 64)
     private String patronymic;
@@ -86,20 +86,20 @@ public class User extends AbstractModel {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSurname() {
         return surname;
     }
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPatronymic() {
@@ -126,51 +126,51 @@ public class User extends AbstractModel {
         this.avatar = avatar;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
-
-    public Map<Partnership, Position> getPartnershipsPositions() {
-        return partnershipsPositions;
-    }
-
-    public void setPartnershipsPositions(Map<Partnership, Position> partnershipsPositions) {
-        this.partnershipsPositions = partnershipsPositions;
-    }
-
-    public Set<Apartment> getOwnApartments() {
-        return ownApartments;
-    }
-
-    public void setOwnApartments(Set<Apartment> ownApartments) {
-        this.ownApartments = ownApartments;
-    }
-
-    public Set<Apartment> getApartments() {
-        return apartments;
-    }
-
-    public void setApartments(Set<Apartment> apartments) {
-        this.apartments = apartments;
-    }
-
-    public Set<Topic> getTopics() {
-        return topics;
-    }
-
-    public void setTopics(Set<Topic> topics) {
-        this.topics = topics;
-    }
-
-    public Set<MessageTopic> getMessagesTopics() {
-        return messagesTopics;
-    }
-
-    public void setMessagesTopics(Set<MessageTopic> messagesTopics) {
-        this.messagesTopics = messagesTopics;
-    }
+//    public Set<Role> getRoles() {
+//        return roles;
+//    }
+//
+//    public void setRoles(Set<Role> roles) {
+//        this.roles = roles;
+//    }
+//
+//    public Map<Partnership, Position> getPartnershipsPositions() {
+//        return partnershipsPositions;
+//    }
+//
+//    public void setPartnershipsPositions(Map<Partnership, Position> partnershipsPositions) {
+//        this.partnershipsPositions = partnershipsPositions;
+//    }
+//
+//    public Set<Apartment> getOwnApartments() {
+//        return ownApartments;
+//    }
+//
+//    public void setOwnApartments(Set<Apartment> ownApartments) {
+//        this.ownApartments = ownApartments;
+//    }
+//
+//    public Set<Apartment> getApartments() {
+//        return apartments;
+//    }
+//
+//    public void setApartments(Set<Apartment> apartments) {
+//        this.apartments = apartments;
+//    }
+//
+//    public Set<Topic> getTopics() {
+//        return topics;
+//    }
+//
+//    public void setTopics(Set<Topic> topics) {
+//        this.topics = topics;
+//    }
+//
+//    public Set<MessageTopic> getMessagesTopics() {
+//        return messagesTopics;
+//    }
+//
+//    public void setMessagesTopics(Set<MessageTopic> messagesTopics) {
+//        this.messagesTopics = messagesTopics;
+//    }
 }

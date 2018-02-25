@@ -1,6 +1,6 @@
 -- USERS, ROLES
 
-INSERT INTO users (username, password, name, surname, patronymic, phone) VALUES
+INSERT INTO users (username, password, surname, name, patronymic, phone) VALUES
   ('user1', '1234', 'Белькевич', 'Дмитрий', 'Анатольевич', '+375297026000'),
   ('user2', '1234', 'Барейша', 'Олег', 'Г', '+375296340737'),
   ('user3', '1234', 'Барейша', 'Светлана', NULL, NULL),

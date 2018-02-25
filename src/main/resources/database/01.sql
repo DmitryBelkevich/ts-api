@@ -4,8 +4,8 @@ CREATE TABLE users (
   id         BIGSERIAL PRIMARY KEY,
   username   VARCHAR(64) NOT NULL,
   password   VARCHAR(64) NOT NULL,
-  name       VARCHAR(64) NOT NULL,
   surname    VARCHAR(64),
+  name       VARCHAR(64) NOT NULL,
   patronymic VARCHAR(64),
   phone      VARCHAR(64),
   avatar     VARCHAR(1024)
