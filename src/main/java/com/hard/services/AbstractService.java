@@ -10,4 +10,6 @@ public interface AbstractService<T> {
     T save(T t);
 
     void delete(long id);
+
+    void deleteAll();
 }

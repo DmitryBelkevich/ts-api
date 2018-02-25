@@ -34,4 +34,9 @@ public class RoleServiceImpl implements RoleService {
     public void delete(long id) {
         roleRepository.delete(id);
     }
+
+    @Override
+    public void deleteAll() {
+        roleRepository.deleteAll();
+    }
 }

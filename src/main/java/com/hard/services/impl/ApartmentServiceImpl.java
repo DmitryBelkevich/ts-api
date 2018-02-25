@@ -34,4 +34,9 @@ public class ApartmentServiceImpl implements ApartmentService {
     public void delete(long id) {
         apartmentRepository.delete(id);
     }
+
+    @Override
+    public void deleteAll() {
+        apartmentRepository.deleteAll();
+    }
 }

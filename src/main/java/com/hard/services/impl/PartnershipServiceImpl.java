@@ -34,4 +34,9 @@ public class PartnershipServiceImpl implements PartnershipService {
     public void delete(long id) {
         partnershipRepository.delete(id);
     }
+
+    @Override
+    public void deleteAll() {
+        partnershipRepository.deleteAll();
+    }
 }

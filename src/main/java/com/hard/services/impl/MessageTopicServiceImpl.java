@@ -34,4 +34,9 @@ public class MessageTopicServiceImpl implements MessageTopicService {
     public void delete(long id) {
         messageTopicRepository.delete(id);
     }
+
+    @Override
+    public void deleteAll() {
+        messageTopicRepository.deleteAll();
+    }
 }

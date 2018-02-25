@@ -34,4 +34,9 @@ public class IssueServiceImpl implements IssueService {
     public void delete(long id) {
         issueRepository.delete(id);
     }
+
+    @Override
+    public void deleteAll() {
+        issueRepository.deleteAll();
+    }
 }

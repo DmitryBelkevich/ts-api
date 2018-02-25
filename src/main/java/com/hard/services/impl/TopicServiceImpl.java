@@ -34,4 +34,9 @@ public class TopicServiceImpl implements TopicService {
     public void delete(long id) {
         topicRepository.delete(id);
     }
+
+    @Override
+    public void deleteAll() {
+        topicRepository.deleteAll();
+    }
 }

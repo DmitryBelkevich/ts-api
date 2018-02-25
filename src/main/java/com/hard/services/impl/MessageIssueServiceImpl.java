@@ -34,4 +34,9 @@ public class MessageIssueServiceImpl implements MessageIssueService {
     public void delete(long id) {
         messageIssueRepository.delete(id);
     }
+
+    @Override
+    public void deleteAll() {
+        messageIssueRepository.deleteAll();
+    }
 }
