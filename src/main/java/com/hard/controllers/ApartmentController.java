@@ -22,13 +22,21 @@ public class ApartmentController {
     private ApartmentService apartmentService;
 
     @GetMapping(value = "", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<Collection<Apartment>> getAll() {
+    public ResponseEntity<Collection<Apartment>> getAll(
+            @RequestParam(required = false) Integer floor
+    ) {
         HttpStatus httpStatus;
 
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
 
-        Collection<Apartment> apartments = apartmentService.getAll();
+        Collection<Apartment> apartments;
+
+        if (floor == null) {
+            apartments = apartmentService.getAll();
+        } else {
+            apartments = apartmentService.findByFloor(floor);
+        }
 
         if (apartments.isEmpty()) {
             httpStatus = HttpStatus.NO_CONTENT;

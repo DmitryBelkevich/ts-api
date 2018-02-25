@@ -39,4 +39,9 @@ public class ApartmentServiceImpl implements ApartmentService {
     public void deleteAll() {
         apartmentRepository.deleteAll();
     }
+
+    @Override
+    public Collection<Apartment> findByFloor(int floor) {
+        return apartmentRepository.findByFloor(floor);
+    }
 }
